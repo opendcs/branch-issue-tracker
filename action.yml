@@ -1,6 +1,8 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: Branch Sub Issues
+description:
+  Creates branch specific sub-issue for each issue based one labels to track
+  work getting applied to release branches.
+author: OpenDCS
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -8,16 +10,9 @@ branding:
   color: red
 
 # Define your inputs here.
-inputs:
-  milliseconds:
-    description: Your input description here
-    required: true
-    default: '1000'
-
+inputs: {}
 # Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
+outputs: {}
 
 runs:
   using: node20
