@@ -1,0 +1,29 @@
+{
+    "action": "opened",
+    "changes": {
+        "old_issue": null,
+        "old_repository": {}
+    },
+    "issue": {
+        "assignee": null,
+        "assignees": null,
+        "body": "Hello",
+        "id": 1,
+        "number": 1,
+        "labels": [
+
+        ],
+        "labels_url": "somewhere",
+        "reactions": {},
+        "state": "open",
+        "state_reason": null,
+
+        "title": "A test issue",
+        "type": null,
+        "user": null,
+        "url": "another place"
+    },
+    "organization": "opendcs",
+    "repository": "opendcs/branch-issue-tracker",
+    "sender": "OpenDCS"
+}
