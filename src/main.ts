@@ -11,10 +11,9 @@ import { Context } from '@actions/github/lib/context.js'
 export async function run(): Promise<void> {
   try {
     const gh: Context = github.context
-    const octokit = github.getOctokit(core.getInput('token'),{
-                request: globalThis.fetch
-              }
-            )
+    const octokit = github.getOctokit(core.getInput('token'), {
+      request: globalThis.fetch
+    })
     const base_issue = gh.payload.issue
     console.log(base_issue)
 
@@ -27,7 +26,7 @@ export async function run(): Promise<void> {
     //     assign sub issue to parent
     // Deleted or labels removed
     //  loop through labels
-    //     find issues for "branch:X" labels 
+    //     find issues for "branch:X" labels
     //       delete
     // Closed
     //   loop through labels
@@ -41,7 +40,6 @@ export async function run(): Promise<void> {
     // "issue reopened"
     //    find and repo sub issues?
 
-
     const result = await octokit.graphql<{ repository: Repository }>({
       query: `
       query getRepo($owner: String!, $repo: String!) {
@@ -53,7 +51,7 @@ export async function run(): Promise<void> {
       owner: gh.repo.owner,
       repo: gh.repo.repo
     })
-    const {repository} = result;
+    const { repository } = result
     console.log(repository)
 
     const { createIssue } = await octokit.graphql<{
@@ -100,6 +98,5 @@ export async function run(): Promise<void> {
     console.log(error)
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
-    
   }
 }
