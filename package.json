@@ -39,7 +39,7 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
-    "@mswjs/interceptors": "^0.39.2",
+    "@mswjs/interceptors": "^0.40.0",
     "@octokit/graphql-schema": "^15.26.0"
   },
   "devDependencies": {
